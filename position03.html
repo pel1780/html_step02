@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <title>position03 : hover,position 실습</title>
     <!-- 쇼핑물 예시(마우스 올렸을때 사진위로 글자 올라오고 테두리 만들기) -->
     <style>
@@ -66,6 +67,26 @@
             align-items: center;
 
             opacity: 1;
+        }
+
+        .inner figure .box2 {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            background: #fff;
+            font-size: 20px;
+            padding: 10px 5px;
+            transform: translate(0, 100%);
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            border: 1px solid #ddd;
+            transition: 0.5s;
+        }
+
+        .inner figure:hover .box2 {
+            transform: translate(0, 0);
         }
 
         .inner figure .box3 {
@@ -143,8 +164,9 @@
             </figure>
             <figure>
                 <img src="./img/m01.jpg" alt="">
-                <div class="box3">
-                    <span>Lorem, ipsum.</span>
+                <div class="box2">
+                    <i class="xi-cart"></i>
+                    <i class="xi-heart"></i>
                 </div>
             </figure>
             <figure>
